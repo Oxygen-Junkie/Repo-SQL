@@ -10,6 +10,6 @@
         END;
 
       UPDATE dbo.Basket
-      SET DiscountValue = 0
-      WHERE ID = inserted.ID;
+      SET DiscountValue = @DiscountValue
+      WHERE ID_SKU = inserted.ID_SKU;
     END;
